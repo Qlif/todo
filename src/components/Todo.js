@@ -22,18 +22,18 @@ function Todo() {
   }
 
   function removeTodo(id) {
-    setTodos(todos.filter(todo => todo.id !== id))
+    setTodos(prevTodos => prevTodos.filter(todo => todo.id !== id))
   }
 
   function addTodo(todo) {
-    setTodos(
-      todos.concat([
+    setTodos(prevTodos =>
+      prevTodos.concat(
         {
           id: Date.now(),
           done: false,
           title: todo
         }
-      ])
+      )
     )
   }
 
