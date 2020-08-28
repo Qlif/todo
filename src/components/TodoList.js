@@ -11,7 +11,7 @@ function TodoList (props){
           todo={todo}
           key={todo.id}
           index={index}
-          onCopmplite={props.onCopmplite}
+          onComplite={props.onComplite}
           removeTodo={props.removeTodo}
         />
       })

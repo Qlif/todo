@@ -12,7 +12,7 @@ function Todo() {
     {id: 3, done: false, title: "Create Todo List"}
   ]);
 
-  function onCopmplite(id) {
+  function onComplite(id) {
     setTodos(todos.map(items => {
       if (items.id === id) {
         items.done = !items.done
@@ -41,7 +41,7 @@ function Todo() {
     <div>
       <h2>Todo List</h2>
       <TodoAdd addTodo={addTodo}/>
-      <TodoList todos={todos} onCopmplite={onCopmplite} removeTodo={removeTodo}/>
+      <TodoList todos={todos} onComplite={onComplite} removeTodo={removeTodo}/>
     </div>);
 }
 
