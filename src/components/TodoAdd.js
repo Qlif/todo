@@ -13,12 +13,16 @@ function TodoAdd({addTodo}) {
     }
   }
 
+  function handlerOnChangeTitle(ev){
+    setTodo(title = ev.target.value)
+  }
+
   return (
     <div>
       <form onSubmit={handlerSubmit}>
         <label>
           Title:
-          <input type="text" value={title} onChange={(ev) => setTodo(title = ev.target.value)}/>
+          <input type="text" value={title} onChange={handlerOnChangeTitle}/>
         </label>
         <button type="submit">Add</button>
 
